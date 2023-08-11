@@ -8,6 +8,10 @@
 #  updated_at :datetime         not null
 #  teacher_id :integer
 #
+# Foreign Keys
+#
+#  fk_rails_...  (teacher_id => teachers.id)
+#
 require 'rails_helper'
 
 RSpec.describe EmailAddress, type: :model do

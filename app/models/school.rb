@@ -8,5 +8,9 @@
 #  updated_at :datetime         not null
 #  parent_id  :integer
 #
+# Foreign Keys
+#
+#  fk_rails_...  (parent_id => schools.id)
+#
 class School < ApplicationRecord
 end

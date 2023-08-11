@@ -10,6 +10,11 @@
 #  school_id   :integer
 #  teacher_id  :integer
 #
+# Foreign Keys
+#
+#  fk_rails_...  (school_id => schools.id)
+#  fk_rails_...  (teacher_id => teachers.id)
+#
 require 'rails_helper'
 
 RSpec.describe Tenureship, type: :model do

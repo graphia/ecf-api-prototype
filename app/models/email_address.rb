@@ -8,5 +8,9 @@
 #  updated_at :datetime         not null
 #  teacher_id :integer
 #
+# Foreign Keys
+#
+#  fk_rails_...  (teacher_id => teachers.id)
+#
 class EmailAddress < ApplicationRecord
 end

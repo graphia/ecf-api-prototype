@@ -8,5 +8,10 @@
 #  teacher_id    :integer
 #  tenureship_id :integer
 #
+# Foreign Keys
+#
+#  fk_rails_...  (teacher_id => teachers.id)
+#  fk_rails_...  (tenureship_id => tenureships.id)
+#
 class Mentorship < ApplicationRecord
 end

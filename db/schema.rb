@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_11_092928) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_11_093018) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -72,4 +72,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_11_092928) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "email_addresses", "teachers"
+  add_foreign_key "induction_periods", "appropriate_bodies"
+  add_foreign_key "induction_periods", "induction_programmes"
+  add_foreign_key "induction_periods", "mentorships"
+  add_foreign_key "mentorships", "teachers"
+  add_foreign_key "mentorships", "tenureships"
+  add_foreign_key "schools", "schools", column: "parent_id"
+  add_foreign_key "tenureships", "schools"
+  add_foreign_key "tenureships", "teachers"
 end
