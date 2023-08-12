@@ -19,4 +19,6 @@ class Tenureship < ApplicationRecord
   belongs_to :teacher
   belongs_to :school
   has_many :mentorships
+
+  scope :current, -> { where(finished_on: nil) }
 end

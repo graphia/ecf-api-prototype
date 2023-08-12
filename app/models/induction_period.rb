@@ -21,4 +21,6 @@ class InductionPeriod < ApplicationRecord
   belongs_to :mentorship
   belongs_to :appropriate_body
   belongs_to :induction_programme
+
+  scope :current, -> { where(finished_on: nil) }
 end
