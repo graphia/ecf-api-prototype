@@ -14,4 +14,9 @@
 #  fk_rails_...  (tenureship_id => tenureships.id)
 #
 class Mentorship < ApplicationRecord
+  belongs_to :tenureship
+  belongs_to :mentor, class_name: 'Teacher', foreign_key: 'teacher_id'
+  has_one :mentee, through: :tenureship, source: :teacher
+  has_many :induction_periods
+  has_many :induction_programmes, through: :induction_periods
 end

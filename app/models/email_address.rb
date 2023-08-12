@@ -13,4 +13,5 @@
 #  fk_rails_...  (teacher_id => teachers.id)
 #
 class EmailAddress < ApplicationRecord
+  belongs_to :teacher
 end

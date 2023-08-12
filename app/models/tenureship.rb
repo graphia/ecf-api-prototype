@@ -16,4 +16,7 @@
 #  fk_rails_...  (teacher_id => teachers.id)
 #
 class Tenureship < ApplicationRecord
+  belongs_to :teacher
+  belongs_to :school
+  has_many :mentorships
 end

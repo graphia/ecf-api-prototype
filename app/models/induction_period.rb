@@ -18,4 +18,7 @@
 #  fk_rails_...  (mentorship_id => mentorships.id)
 #
 class InductionPeriod < ApplicationRecord
+  belongs_to :mentorship
+  belongs_to :appropriate_body
+  belongs_to :induction_programme
 end
