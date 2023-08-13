@@ -17,4 +17,7 @@ class Teacher < ApplicationRecord
 
   has_many :mentors, through: :mentorships_as_mentee, source: :mentor
   has_many :mentees, through: :mentorships_as_mentor, source: :mentee
+
+  scope :mentors, -> { where(true) }
+  scope :ecf, -> { where(true) }
 end

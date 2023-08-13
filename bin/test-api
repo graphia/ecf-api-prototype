@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+xh get http://localhost:3000/api/participant-declarations
+xh get http://localhost:3000/api/participant-declarations/1
+echo '{ "hello": "world" }' | xh patch http://localhost:3000/api/participant-declarations/void
+
+xh get http://localhost:3000/api/participants
+xh get http://localhost:3000/api/participants/1
+
+xh get http://localhost:3000/api/participants
+xh get http://localhost:3000/api/participants/1
